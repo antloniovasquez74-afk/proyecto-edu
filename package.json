@@ -1,0 +1,12 @@
+{
+  "name": "aprendo-jugando",
+  "private": true,
+  "description": "Proyecto fin de curso Desarrollo Web 2026 – React + Express + MySQL",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "db:init": "npm --prefix backend run db:init",
+    "start:backend": "npm --prefix backend start",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build"
+  }
+}

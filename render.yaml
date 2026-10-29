@@ -1,0 +1,17 @@
+# Blueprint opcional para publicar el BACKEND en Render (https://render.com)
+services:
+  - type: web
+    name: aprendo-jugando-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - { key: DB_HOST, sync: false }
+      - { key: DB_PORT, sync: false }
+      - { key: DB_USER, sync: false }
+      - { key: DB_PASSWORD, sync: false }
+      - { key: DB_NAME, sync: false }
+      - { key: DB_SSL, value: "true" }
+      - { key: CORS_ORIGIN, sync: false }   # URL del frontend publicado, sin "/" final
